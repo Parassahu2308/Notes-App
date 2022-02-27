@@ -47,7 +47,7 @@ function showNotes () {
 
 // function to delete node
 function deleteNote(index){
-    console.log("i am deleting", index);
+    // console.log("i am deleting", index);
     let notes = localStorage.getItem("notes");
     if (notes == null) {
       notesObj = [];
@@ -60,3 +60,19 @@ function deleteNote(index){
     showNotes();
 
 }
+
+//search function
+let search = document.getElementById('searchTxt');
+search.addEventListener("input", function(){
+      let inputval = search.value.toLowerCase();
+      let noteCard = document.getElementsByClassName('noteCard');
+      Array.from(noteCard).forEach(function(element){
+             let cardTxt = element.getElementsByTagName("p")[0].innerText;
+             if(cardTxt.includes(inputval)){
+                 element.style.display = "block";
+             }
+             else{
+                element.style.display = "none";
+             }
+      })
+})
