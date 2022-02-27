@@ -15,7 +15,7 @@
   </head>
 
   <body>
-      <!-- Navbar -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Magic Notes</a>
@@ -53,20 +53,34 @@
 
     <!-- Write a Note -->
     <div class="container my-3">
-         <h1>Welcome To Magic Notes</h1>
-         <div class="card" >
-            <div class="card-body">
-              <h5 class="card-title">Add a Note</h5>
-              <div class="mb-3">
-                <textarea class="form-control" id="addtxt" rows="3"></textarea>
-              </div>
-              <a  class="btn btn-primary" id="addbtn">Add Note</a>
-            </div>
+      <h1>Welcome To Magic Notes</h1>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Add a Note</h5>
+          <div class="mb-3">
+            <textarea class="form-control" id="addtxt" rows="3"></textarea>
           </div>
+          <a class="btn btn-primary" id="addbtn">Add Note</a>
+        </div>
+      </div>
+      <hr />
+
+      <!-- Notes Display -->
+      <h1>Your Notes</h1>
+      <hr />
+      <div id="notes" class="row container-fluid">
+        <div class="my-3 mx-2 card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Title</h5>
+            <p class="card-text"> </p> 
+            <button class="btn btn-primary">Delete Note</button>
+          </div>
+        </div>
+
+      </div>
     </div>
 
     <!-- Notes -->
-
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
